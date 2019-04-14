@@ -1,55 +1,55 @@
 #include<stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 
-void prime_num(); //¼Ò¼ö ±¸ÇÏ´Â ÇÁ·Î±×·¥
+void prime_num(); //ì†Œìˆ˜ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨
 int main() {
-	printf("======¼öÇÐ ¼öÇàÆò°¡·Î ¼ö¿­ ±¸ÇÏ´Â ÇÁ·Î±×·¥ ¸¸µé¾î¿À´Â ¾Ö´Â Àü±³¿¡ ÃÖÀº¼ö¹Û¿¡ ¾øÀ»°ÅÀÓ======\n");
-	int num = 0; //¼±ÅÃ±Ç
-	int how = 0; //¾ó¸¶³ª ¹Ýº¹ÇÒ Áö ÀÔ·Â
-	printf("1. µîÂ÷¼ö¿­ \n 2. µîºñ¼ö¿­ \n 3. ¼Ò¼ö \n");
+	printf("======ìˆ˜í•™ ìˆ˜í–‰í‰ê°€ë¡œ ìˆ˜ì—´ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ ë§Œë“¤ì–´ì˜¤ëŠ” ì• ëŠ” ì „êµì— ìµœì€ìˆ˜ë°–ì— ì—†ì„ê±°ìž„======\n");
+	int num = 0; //ì„ íƒê¶Œ
+	int how = 0; //ì–¼ë§ˆë‚˜ ë°˜ë³µí•  ì§€ ìž…ë ¥
+	printf("1. ë“±ì°¨ìˆ˜ì—´ \n 2. ë“±ë¹„ìˆ˜ì—´ \n 3. ì†Œìˆ˜ \n");
 	scanf_s("%d", &num);
 
-		double as = 0;//µîÂ÷¼ö¿­
-		double cd = 0;//°øÂ÷
-		double gs = 0;//µîºñ¼ö¿­
-		double cr = 0;//°øºñ
+		double as = 0;//ë“±ì°¨ìˆ˜ì—´
+		double cd = 0;//ê³µì°¨
+		double gs = 0;//ë“±ë¹„ìˆ˜ì—´
+		double cr = 0;//ê³µë¹„
 
 	switch (num) {
 	
 	case 1 : 
-		//µîÂ÷¼ö¿­ ±¸ÇÏ´Â ÇÔ¼ö
-		//ÀÔ·Â : Ã¹¹øÂ° °ª ÀÔ·Â, °øÂ÷ ÀÔ·Â
+		//ë“±ì°¨ìˆ˜ì—´ êµ¬í•˜ëŠ” í•¨ìˆ˜
+		//ìž…ë ¥ : ì²«ë²ˆì§¸ ê°’ ìž…ë ¥, ê³µì°¨ ìž…ë ¥
 
-		printf("µîÂ÷¼ö¿­ÀÇ Ã¹¹øÂ° °ªÀ» ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä ¹«¸®¼ö ºÐ¼ö ±×·±°Å ¾ÈµÊ Á¤¼ö³ª ¼Ò¼ö·Î ¶³¾îÁö°Ô ÇØÁÖ¼¼¿ä"); scanf_s("%lf", &as);
-		printf("°øÂ÷¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä ¹«¸®¼ö ºÐ¼ö ±×·±°Å¾ÈµÊ ¼Ò¼ö·Î ¶³¾îÁö°Ô ÇØÁÖ¼¼¿ä"); scanf_s("&lf", &cd);
-		printf("¾ó¸¶³ª ¹Ýº¹ÇÒ·¡¿ä? ¹é¸¸¹ø ¹Ýº¹ÇÏ¸é È¥³²"); scanf_s("&d", &how);
+		printf("ë“±ì°¨ìˆ˜ì—´ì˜ ì²«ë²ˆì§¸ ê°’ì„ ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” ë¬´ë¦¬ìˆ˜ ë¶„ìˆ˜ ê·¸ëŸ°ê±° ì•ˆë¨ ì •ìˆ˜ë‚˜ ì†Œìˆ˜ë¡œ ë–¨ì–´ì§€ê²Œ í•´ì£¼ì„¸ìš”"); scanf_s("%lf", &as);
+		printf("ê³µì°¨ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” ë¬´ë¦¬ìˆ˜ ë¶„ìˆ˜ ê·¸ëŸ°ê±°ì•ˆë¨ ì†Œìˆ˜ë¡œ ë–¨ì–´ì§€ê²Œ í•´ì£¼ì„¸ìš”"); scanf_s("&lf", &cd);
+		printf("ì–¼ë§ˆë‚˜ ë°˜ë³µí• ëž˜ìš”? ë°±ë§Œë²ˆ ë°˜ë³µí•˜ë©´ í˜¼ë‚¨"); scanf_s("&d", &how);
 
 		for (int i = 0;i <= how;i++) {
 			as = as + cd;
 			printf("%lf ", as);
 		}
-		printf("\n ===== µîÂ÷¼ö¿­ ===== \n");
+		printf("\n ===== ë“±ì°¨ìˆ˜ì—´ ===== \n");
 		break;
 	case 2 :	
-		//µîºñ¼ö¿­ ±¸ÇÏ´Â ÇÔ¼ö
-		//ÀÔ·Â : Ã¹¹øÂ° °ª ÀÔ·Â, °øºñ
+		//ë“±ë¹„ìˆ˜ì—´ êµ¬í•˜ëŠ” í•¨ìˆ˜
+		//ìž…ë ¥ : ì²«ë²ˆì§¸ ê°’ ìž…ë ¥, ê³µë¹„
 
-		printf("µîºñ¼ö¿­ÀÇ Ã¹¹ø¤Š °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä ¹«¸®¼ö ºÐ¼ö º¹¼Ò¼ö ±×·±°Å ¾ÈµÊ Á¤¼ö³ª ¼Ò¼ö·Î ¶³¾îÁö°Ô ÇØÁÖ¼¼¿ä"); scanf_s("%lf", &gs);
-		printf("°øºñ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä ¹«¸®¼ö ºÐ¼ö º¹¼Ò¼ö ±×·±°Å ¾ÈµÊ Á¤¼ö³ª ¼Ò¼ö·Î ¶³¾îÁö°Ô ÇØÁÖ¼¼¿ä"); scanf_s("&lf", cr);
-		printf("¾ó¸¶³ª ¹Ýº¹ÇÒ·¡¿ä? Ãµ¸¸¹ø ¹Ýº¹ÇÏ¸é È¥³²"); scanf_s("&d", how);
+		printf("ë“±ë¹„ìˆ˜ì—´ì˜ ì²«ë²ˆì§¸ ê°’ì„ ìž…ë ¥í•´ì£¼ì„¸ìš” ë¬´ë¦¬ìˆ˜ ë¶„ìˆ˜ ë³µì†Œìˆ˜ ê·¸ëŸ°ê±° ì•ˆë¨ ì •ìˆ˜ë‚˜ ì†Œìˆ˜ë¡œ ë–¨ì–´ì§€ê²Œ í•´ì£¼ì„¸ìš”"); scanf_s("%lf", &gs);
+		printf("ê³µë¹„ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” ë¬´ë¦¬ìˆ˜ ë¶„ìˆ˜ ë³µì†Œìˆ˜ ê·¸ëŸ°ê±° ì•ˆë¨ ì •ìˆ˜ë‚˜ ì†Œìˆ˜ë¡œ ë–¨ì–´ì§€ê²Œ í•´ì£¼ì„¸ìš”"); scanf_s("&lf", cr);
+		printf("ì–¼ë§ˆë‚˜ ë°˜ë³µí• ëž˜ìš”? ì²œë§Œë²ˆ ë°˜ë³µí•˜ë©´ í˜¼ë‚¨"); scanf_s("&d", how);
 		
 		for (int i = 0;i <= how;i++) {
 			gs = gs * cr;
 			printf("%lf ", gs);
 		}
-		printf("\n µîºñ¼ö¿­ \n");
+		printf("\n ë“±ë¹„ìˆ˜ì—´ \n");
 		break;
 	case 3 :
-		//¼Ò¼ö ±¸ÇÏ´Â ÇÔ¼ö
+		//ì†Œìˆ˜ êµ¬í•˜ëŠ” í•¨ìˆ˜
 		prime_num();
 		break;
 
-	default: printf("==Àß¸øÀÔ·ÂÇß½À´Ï´Ù==\n");
+	default: printf("==ìž˜ëª»ìž…ë ¥í–ˆìŠµë‹ˆë‹¤==\n");
 		break;
 	}
 	return 0;
@@ -59,8 +59,8 @@ int i, j, count = 1;
 
 		long sum = 0;
 		int how = 0;
-		printf("¾ó¸¶³ª ¹Ýº¹ÇÒ·¡¿ä? ¼Ò¼öÁ¡ ¹«Àû±Ç ¾ÈµÊ");scanf_s("%d", &how);
-		printf("1~%d »çÀÌÀÇ ¼ö Áß¿¡¼­ ¼Ò¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥ \n",&how);
+		printf("ì–¼ë§ˆë‚˜ ë°˜ë³µí• ëž˜ìš”? ì†Œìˆ˜ì  ë¬´ì ê¶Œ ì•ˆë¨");scanf_s("%d", &how);
+		printf("1~%d ì‚¬ì´ì˜ ìˆ˜ ì¤‘ì—ì„œ ì†Œìˆ˜ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ \n",&how);
 
 		printf("%d\t", 1);
 
@@ -78,5 +78,5 @@ int i, j, count = 1;
 					printf("\n");
 			}
 		}
-		printf("\n1ºÎÅÍ 1000 »çÀÌÀÇ ¼Ò¼ö´Â %d°³ÀÌ´Ù. \n", count);
+		printf("\n1ë¶€í„° 1000 ì‚¬ì´ì˜ ì†Œìˆ˜ëŠ” %dê°œì´ë‹¤. \n", count);
 	}
